@@ -1,9 +1,11 @@
 console.log("Bot active");
 
-var weather = require('weather-js');
-var twit = require('twit');
-var config = require('./config');
-var t = new twit(config.twitterKey);
+const weather = require('weather-js');
+const twit = require('twit');
+const config = require('./config');
+const emoji = require("emojilib");
+
+var t = new twit(config.twitterKey);//weather robot twitter obj
 
 var host = "TheWeatherRobo";
 var reply = "";
@@ -54,3 +56,6 @@ stream.on('tweet', function (tweet) {
     }
   });
 });
+
+
+//TODO: translate tweets into emoji and update entire code..
