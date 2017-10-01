@@ -3,7 +3,7 @@ console.log("Bot active");
 const weather = require('weather-js');
 const twit = require('twit');
 const config = require('./config');
-const emoji = require("emojilib");
+const emojiLib = require('./emojiLib');
 
 var t = new twit(config.twitterKey);//weather robot twitter obj
 
@@ -24,7 +24,6 @@ stream.on('tweet', function (tweet) {
   */
   weather.find({search: loc, degreeType: 'C'}, function(err, result){
     if(err)throw err;
-
     var reply;
     var nameID = tweet.id_str;
     var name = tweet.user.screen_name;
@@ -36,10 +35,11 @@ stream.on('tweet', function (tweet) {
 
     else{
       //Takes important info and creates reply
+      let weather = result[0].current.skytext;
       var degrees = String.fromCharCode(176) + "C"; // degress and celcius
       reply = "Location: " + result[0].location.name + "\n" +
               "Temperature: " + result[0].current.temperature + degrees + "\n" +
-              "Weather: " + result[0].current.skytext + "\n";
+              "Weather: " + getEmoji(result[0].current.skytext) + "\n";
       replyTweet(reply);
     }
 
@@ -58,4 +58,12 @@ stream.on('tweet', function (tweet) {
 });
 
 
-//TODO: translate tweets into emoji and update entire code..
+function getEmoji(words){
+  console.log(words.toLowerCase());
+  for(emoji in emojiLib){
+    if(emoji === words.toLowerCase()){
+      return emoji.uniCode;
+    }
+  }
+  return words;
+}
