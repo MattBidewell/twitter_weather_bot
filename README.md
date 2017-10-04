@@ -40,3 +40,7 @@ Finally we need to change the regex expression to suit the account name you're u
 var regex = /@ /i;
 ```
 Make sure to leave the @ at the start and a space at the end.
+
+
+### TODO:
+Implementation of Emojis to reduce the number of characters in the tweet. So far implmentation of the an emoji libary has been done, however tweeting the unicode has proven unsuccessful.
