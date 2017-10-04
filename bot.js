@@ -3,7 +3,10 @@ console.log("Bot active");
 const weather = require('weather-js');
 const twit = require('twit');
 const config = require('./config');
-const emojiLib = require('./emojiLib');
+
+let emojisFile = require('./emojiLib');
+const emojiLib = emojisFile.emojis;
+
 
 var t = new twit(config.twitterKey);//weather robot twitter obj
 
@@ -35,11 +38,22 @@ stream.on('tweet', function (tweet) {
 
     else{
       //Takes important info and creates reply
+      
       let weather = result[0].current.skytext;
+      let weatherEmoji;
+      let weatherRegexed = weather.replace(/ /g,"_");
+       
+      for(emojiName in emojiLib){
+        if(emojiName === weatherRegexed.toLowerCase()){
+            weatherEmoji = emojiLib[emojiName].char;
+            //weather = emojiLib.weatherRegexed.char;
+            break;
+        }
+      }
+
       var degrees = String.fromCharCode(176) + "C"; // degress and celcius
-      reply = "Location: " + result[0].location.name + "\n" +
-              "Temperature: " + result[0].current.temperature + degrees + "\n" +
-              "Weather: " + getEmoji(result[0].current.skytext) + "\n";
+      reply = 
+      `🌎:${result[0].location.name}\n🌡️:${result[0].current.temperature}${degrees}\n${weatherEmoji}:${weather}`;
       replyTweet(reply);
     }
 
@@ -56,15 +70,3 @@ stream.on('tweet', function (tweet) {
     }
   });
 });
-
-
-function getEmoji(words){
-  console.log(words.toLowerCase());
-  console.log(emojiLib);
-  for(emoji in emojiLib){
-    if(emoji === words.toLowerCase()){
-      return emoji.uniCode;
-    }
-  }
-  return words;
-}
