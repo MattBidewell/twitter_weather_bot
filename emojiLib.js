@@ -7,6 +7,10 @@ module.exports = {
         "char":"☁️",
         "uniCode":'\u2601'   
     },
+    "mostly cloudy":{
+        "char":"☁️",
+        "uniCode":"\u2601"   
+    },
     "partly sunny":{
         "char": "⛅",
         "uniCode":'\u26c5'           
