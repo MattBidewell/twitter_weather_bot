@@ -60,6 +60,7 @@ stream.on('tweet', function (tweet) {
 
 function getEmoji(words){
   console.log(words.toLowerCase());
+  console.log(emojiLib);
   for(emoji in emojiLib){
     if(emoji === words.toLowerCase()){
       return emoji.uniCode;
