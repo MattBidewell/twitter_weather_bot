@@ -1,5 +1,3 @@
-console.log("Bot active");
-
 const weather = require('weather-js'); //require weather api
 const twit = require('twit'); //require twitter api
 const config = require('./config');
