@@ -8,7 +8,7 @@ I used the streaming API to retrieve a stream of tweets that mentioned @TheWeath
 A Recent update has included the functionality for the bot to reply using emojis. The bottom line in the response tweet includes the weather, to create a more friendly experience the bot replies with an emoji matching the expected forecast.
 
 ### Example of tweet
-![Example of weather bot in action](https://imgur.com/a/DddEJ)
+![Example of weather bot in action](https://i.imgur.com/l49SCuJ.png)
 
 ### How to run locally
 Before cloning makes sure you have a Twitter Dev account and have application keys ready. You can find out more here: [Twitter Dev](https://dev.twitter.com/)
