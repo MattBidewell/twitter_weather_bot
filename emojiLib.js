@@ -1,71 +1,71 @@
 module.exports = {
-    "emojis":{
-        "sunny":{
-            "char":"☀️",
-            "uniCode":'\u2600'             
+    'emojis':{
+        'sunny':{
+            'char':'☀️',
+            'uniCode':'\u2600'             
         },
-        "cloudy":{
-            "char":"☁️",
-            "uniCode":'\u2601'   
+        'cloudy':{
+            'char':'☁️',
+            'uniCode':'\u2601'   
         },
-        "mostly_cloudy":{
-            "char":"☁️",
-            "uniCode":"\u2601"
+        'mostly_cloudy':{
+            'char':'☁️',
+            'uniCode':'\u2601'
         },
-        "partly_sunny":{
-            "char": "⛅",
-            "uniCode":'\u26c5'           
+        'partly_sunny':{
+            'char': '⛅',
+            'uniCode':'\u26c5'           
         },
-        "mostly_sunny":{
-            "char": "⛅",        
-            "uniCode":'\u26c5'           
+        'mostly_sunny':{
+            'char': '⛅',        
+            'uniCode':'\u26c5'           
         },
-        "mostly_clear":{
-            "char": "⛅",        
-            "uniCode":'\u26c5'           
+        'mostly_clear':{
+            'char': '⛅',        
+            'uniCode':'\u26c5'           
         },
-        "haze":{
-            "char": "🌫",
-            "uniCode":'\u1f32b'
+        'haze':{
+            'char': '🌫',
+            'uniCode':'\u1f32b'
         },
-        "clear":{
-            "char": "☀️",
-            "uniCode":'\u2600'                     
+        'clear':{
+            'char': '☀️',
+            'uniCode':'\u2600'                     
         },
-        "rain_showers":{
-            "char": "🌧",
+        'rain_showers':{
+            'char': '🌧',
             'uniCode':'\u1F327'
         },
-        "rain":{
-            "char": "🌧",
+        'rain':{
+            'char': '🌧',
             'uniCode':'\u1F327'        
         },
-        "showers":{
-            "char": "🌦",
+        'showers':{
+            'char': '🌦',
             'uniCode':'\u1F326'    
         },
-        "shower":{
-            "char": "🌦" ,
+        'shower':{
+            'char': '🌦' ,
             'uniCode':'\u1F326'            
         },
-        "fair":{
-            "char": "⛅",
-            "uniCode":'\u26c5'                   
+        'fair':{
+            'char': '⛅',
+            'uniCode':'\u26c5'                   
         },
-        "snow":{
-            "char": "❄️",
-            "uniCode":'\u2744'
+        'snow':{
+            'char': '❄️',
+            'uniCode':'\u2744'
         },
-        "light_rain":{
-            "char": "🌦",
+        'light_rain':{
+            'char': '🌦',
             'uniCode':'\u1F326'                    
         },
-        "t-storms":{
-            "char": "⛈",
+        't-storms':{
+            'char': '⛈',
             'uniCode':'\u26C8'
         },
-        "storms":{
-            "char": "⛈",
+        'storms':{
+            'char': '⛈',
             'uniCode':'\u26C8'        
         }
     }
