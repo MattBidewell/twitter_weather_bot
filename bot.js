@@ -36,11 +36,11 @@ stream.on('tweet', function(tweet) {
   
   let reply;
   
-  
-  function replyTweet(replyText){
-    // Creates the response tweet JSON. 
+  function replyTweet(...replyText){
+    // Creates the response tweet JSON.
+    const response = replyText.join('');
     const res = {
-      status: `@${name} ${replyText}`, // template lateral string
+      status: `@${name} ${response}`, // template lateral string
       in_reply_to_status_id: nameID
     };
     
@@ -59,7 +59,7 @@ stream.on('tweet', function(tweet) {
       // comparest the name of the emoji in emojiLib with the weather
       if(emojiName === weatherRegexed.toLowerCase()){
           // if match then emoji becomes part of the reply.
-          return Emoji = emojiLib[emojiName].char;
+          return emojiLib[emojiName].char;
       }
     }
     return emoji
@@ -99,12 +99,8 @@ stream.on('tweet', function(tweet) {
       const forecastDay3 = 
       `\n${result[0].forecast[3].shortday}: ${getEmoji(result[0].forecast[3].skytextday)} with a low of ${result[0].forecast[3].low}${degrees} and a high of ${result[0].forecast[3].high}${degrees}`;
 
-      reply += forecastDay1;
-      reply += forecastDay2;
-      reply += forecastDay3;
 
-      console.log(reply);
-      replyTweet(reply);
+      replyTweet(reply, forecastDay1, forecastDay2, forecastDay3);
     }
   });
 });
