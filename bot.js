@@ -1,6 +1,6 @@
 const weather = require('weather-js'); // require weather api
 const Twit = require('twit'); // require twitter api
-const config = require('./config');
+// const config = require('./config');
 
 // retrieve content from emojiLib file
 const emojisFile = require('./emojiLib');
@@ -8,8 +8,18 @@ const emojisFile = require('./emojiLib');
 // retrieve emojis
 const emojiLib = emojisFile.emojis; 
 
+require('dotenv').config({
+  path: 'variables.env'
+});
+
+const twitterConfig = {
+  consumer_key: process.env.consumer_key,
+  consumer_secret: process.env.consumer_secret,
+  access_token: process.env.access_token,
+  access_token_secret: process.env.access_token_secret
+}
 // weather robot twitter obj
-const t = new Twit(config.twitterKey);
+const t = new Twit(twitterConfig);
 
 const host = 'TheWeatherRobo'; // Twitter @ name.
 
