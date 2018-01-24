@@ -6,6 +6,10 @@
 ### Config File ###
 config.js
 
+### Variables ###
+variables.env
+
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
