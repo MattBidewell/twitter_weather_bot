@@ -80,8 +80,9 @@ stream.on('tweet', function(tweet) {
     celcius is life.
   */
   weather.find({search: loc, degreeType: 'C'}, function(err, result){
-    if(err)throw err;
-
+    if(err){
+      console.err(err);
+    }
     // if location does not exist or MSN weather cannot find it
     if(result[0] === undefined){ 
       reply = "Unfortunetly, I can't retrieve that location";
