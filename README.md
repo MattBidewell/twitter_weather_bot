@@ -4,7 +4,12 @@ This project is a Twitter bot designed to provide users with the forecasted weat
 
 I used the streaming API to retrieve a stream of tweets that mentioned @TheWeatherRobo. The bot would then read the tweet and use the text to search for the weather using MSN weather API.  If the location was real, it will return with the current weather, else it would return with a generic 'could not find location' error message.
 
-### Recent updates
+### Recent updates 
+
+#### January 2018
+Version 2: Updated the codebase to ES6 features, extended the detail of the response by adding a following 3 day forecast of high and low temperatures.
+#### September 2017
+
 A Recent update has included the functionality for the bot to reply using emojis. The bottom line in the response tweet includes the weather, to create a more friendly experience the bot replies with an emoji matching the expected forecast.
 
 ### Example of tweet
